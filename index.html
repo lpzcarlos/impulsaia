@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Agencia IA - Transformación Digital para Pymes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Hide scrollbar for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <span class="material-symbols-outlined text-blue-600 text-4xl">smart_toy</span>
+                <span class="font-bold text-xl tracking-tight text-gray-900">Impulsa<span class="text-blue-600">IA</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#problema" class="text-gray-600 hover:text-blue-600 font-medium transition">El Problema</a>
+                <a href="#soluciones" class="text-gray-600 hover:text-blue-600 font-medium transition">Soluciones</a>
+                <a href="#consultoria" class="text-gray-600 hover:text-blue-600 font-medium transition">Consultoría</a>
+                <a href="#calculadora" class="text-gray-600 hover:text-blue-600 font-medium transition">Calculadora ROI</a>
+                <a href="#contacto" class="px-5 py-2.5 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="#problema" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md font-medium">El Problema</a>
+            <a href="#soluciones" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md font-medium">Soluciones</a>
+            <a href="#consultoria" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md font-medium">Consultoría</a>
+            <a href="#contacto" class="block w-full text-center mt-4 px-5 py-3 bg-blue-600 text-white rounded-lg font-bold">Contactar Ahora</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" alt="Profesionales TI con hologramas IA" class="w-full h-full object-cover">
+        <div class="hero-overlay absolute inset-0"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left pt-20">
+        <div class="max-w-3xl fade-in-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-semibold mb-6 backdrop-blur-sm">
+                Especialistas en Automatización para Pymes
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                Ahorra tiempo y dinero con <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Inteligencia Artificial</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                Transformamos pequeñas y medianas empresas implementando agentes autónomos y chatbots que trabajan 24/7 por ti. Deja de perder recursos en tareas repetitivas.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+                <a href="#soluciones" class="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg hover:bg-blue-500 transition shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 group">
+                    Ver Soluciones
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="#calculadora" class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-lg font-bold text-lg hover:bg-white/20 transition flex items-center justify-center gap-2">
+                    Calcular Ahorro
+                    <span class="material-symbols-outlined text-green-400">savings</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll Down Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50 hidden md:block">
+        <span class="material-symbols-outlined text-4xl">keyboard_arrow_down</span>
+    </div>
+</section>
+
+<!-- Pain Points / Value Prop -->
+<section id="problema" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Tu empresa está estancada en lo operativo?</h2>
+            <p class="text-gray-600 text-lg">La mayoría de las Pymes pierden hasta un 40% de su productividad en tareas que hoy pueden automatizarse por completo.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-red-600 text-3xl">schedule</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Pérdida de Tiempo</h3>
+                <p class="text-gray-600 leading-relaxed">Horas interminables respondiendo los mismos emails, agendando citas manualmente y gestionando facturas una por una.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-orange-600 text-3xl">payments</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Costes Operativos Altos</h3>
+                <p class="text-gray-600 leading-relaxed">Contratar más personal para tareas administrativas básicas encarece tu producto y reduce tus márgenes de beneficio.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-purple-600 text-3xl">sentiment_dissatisfied</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Clientes Insatisfechos</h3>
+                <p class="text-gray-600 leading-relaxed">Tardar horas en responder una duda simple puede costarte una venta. Tus clientes esperan atención inmediata 24/7.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section (Standard Solutions) -->
+<section id="soluciones" class="py-24 bg-gray-900 text-white overflow-hidden relative">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-blue-900/20 blur-3xl rounded-full translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-purple-900/20 blur-3xl rounded-full -translate-x-1/4"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <!-- Content Column -->
+            <div class="lg:w-1/2">
+                <h2 class="text-blue-400 font-bold tracking-wider uppercase text-sm mb-2">Soluciones Packaged</h2>
+                <h3 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Implementamos Agentes Inteligentes en tu Negocio</h3>
+                
+                <div class="space-y-6">
+                    <!-- Accordion Item 1 -->
+                    <div class="group border-l-4 border-blue-600 pl-6 cursor-pointer service-item" onclick="changeService(0)">
+                        <h4 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Agentes de Atención al Cliente 24/7</h4>
+                        <p class="text-gray-400 text-sm md:text-base hidden group-hover:block transition-all duration-300">
+                            Chatbots avanzados entrenados con tus datos. Responden dudas, resuelven incidencias y filtran tickets complejos automáticamente, sin dormir ni pedir vacaciones.
+                        </p>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="group border-l-4 border-gray-700 hover:border-blue-600 pl-6 cursor-pointer service-item" onclick="changeService(1)">
+                        <h4 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Automatización de Flujos (RPA)</h4>
+                        <p class="text-gray-400 text-sm md:text-base hidden group-hover:block transition-all duration-300">
+                            Conectamos tus herramientas (CRM, Email, Excel). Facturación automática, envío de correos personalizados y sincronización de datos sin intervención humana.
+                        </p>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="group border-l-4 border-gray-700 hover:border-blue-600 pl-6 cursor-pointer service-item" onclick="changeService(2)">
+                        <h4 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Agentes de Ventas Autónomos</h4>
+                        <p class="text-gray-400 text-sm md:text-base hidden group-hover:block transition-all duration-300">
+                            Asistentes que califican leads entrantes, agendan reuniones en tu calendario y hacen seguimiento a clientes potenciales automáticamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="lg:w-1/2 relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700 group">
+                    <!-- Dynamic Image based on selection -->
+                    <img id="service-img" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2006&auto=format&fit=crop" alt="Interfaz Chatbot IA" class="w-full h-auto transform group-hover:scale-105 transition duration-700 ease-in-out">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="font-mono text-sm font-bold text-white">Estado: Activo 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive ROI Calculator Section -->
+<section id="calculadora" class="py-24 bg-blue-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <div class="grid md:grid-cols-2">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Calculadora de ROI</h2>
+                    <p class="text-gray-600 mb-8">Descubre cuánto podrías ahorrar mensualmente automatizando tareas administrativas con nuestra tecnología.</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Número de Empleados Administrativos</label>
+                            <input type="range" id="employees" min="1" max="50" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>1</span>
+                                <span id="emp-val" class="font-bold text-blue-600 text-lg">5 empleados</span>
+                                <span>50</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Horas semanales dedicadas a tareas repetitivas (por persona)</label>
+                            <input type="range" id="hours" min="1" max="20" value="8" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>1h</span>
+                                <span id="hours-val" class="font-bold text-blue-600 text-lg">8 horas</span>
+                                <span>20h</span>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-xs text-gray-400">*Estimación basada en un coste medio de 15€/hora.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-600 p-8 md:p-12 flex flex-col justify-center text-white text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-blue-700/50 pattern-grid-lg opacity-20"></div>
+                    <div class="relative z-10">
+                        <p class="text-blue-100 font-medium text-lg mb-2">Ahorro Potencial Mensual</p>
+                        <div id="total-savings" class="text-5xl md:text-6xl font-extrabold mb-2">2.400€</div>
+                        <p class="text-blue-200 text-sm mb-8">Más de <span id="yearly-savings" class="font-bold text-white">28.800€</span> al año</p>
+                        
+                        <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
+                            <p class="text-sm font-medium">Equivale a ganar</p>
+                            <div class="text-2xl font-bold flex items-center justify-center gap-2 mt-1">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span id="hours-saved">160</span> horas libres
+                            </div>
+                            <p class="text-xs text-blue-100 mt-1">para dedicar a crecer tu negocio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom Consultancy Section -->
+<section id="consultoria" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Image -->
+            <div class="order-2 lg:order-1 relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-100 rounded-full blur-xl z-0"></div>
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="Expertos IA trabajando" class="relative z-10 rounded-2xl shadow-2xl w-full">
+                <div class="absolute -bottom-6 -right-6 w-48 bg-white p-4 rounded-lg shadow-xl border border-gray-100 z-20 hidden md:block">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <span class="material-symbols-outlined text-sm">verified</span>
+                        </div>
+                        <span class="font-bold text-gray-800 text-sm">Estrategia 100% Ad-hoc</span>
+                    </div>
+                    <p class="text-xs text-gray-500">Diseñamos la solución exacta que tu flujo de trabajo necesita.</p>
+                </div>
+            </div>
+            
+            <!-- Text -->
+            <div class="order-1 lg:order-2">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm font-semibold mb-6">
+                    <span class="material-symbols-outlined text-base">diamond</span>
+                    Servicio Premium
+                </div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Consultoría y Desarrollo a Medida</h2>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    ¿Tu negocio tiene necesidades únicas? No te preocupes. Más allá de nuestras soluciones estándar, ofrecemos un servicio de consultoría estratégica. Analizamos tu operativa actual, detectamos cuellos de botella y desarrollamos soluciones de IA personalizadas para ti.
+                </p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
+                        <span class="text-gray-700">Auditoría de procesos operativos.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
+                        <span class="text-gray-700">Integraciones complejas vía API (ERP, CRM propio).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
+                        <span class="text-gray-700">Formación a tu equipo para el uso de herramientas IA.</span>
+                    </li>
+                </ul>
+                
+                <a href="#contacto" class="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition">
+                    Solicitar Consultoría Personalizada
+                    <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Proof / Team Vibe -->
+<section class="py-16 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-12">Impulsando el cambio en empresas reales</h3>
+        <div class="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Equipo colaborando" class="w-full h-full object-cover transition transform duration-1000 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end justify-center pb-8">
+                <p class="text-white text-lg font-medium px-4">"La tecnología es el medio, el crecimiento de tu negocio es el fin."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section (No Form) -->
+<section id="contacto" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="material-symbols-outlined text-6xl text-blue-600 mb-6">rocket_launch</span>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">¿Listo para escalar tu negocio?</h2>
+        <p class="text-xl text-gray-600 mb-10">
+            Analicemos juntos cómo la IA puede transformar tu empresa. Sin compromisos.
+            <br>Contáctanos directamente para agendar una primera sesión de valoración.
+        </p>
+        
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200 inline-block w-full max-w-2xl relative overflow-hidden group hover:border-blue-300 transition-colors duration-300">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                <span class="material-symbols-outlined text-9xl">mail</span>
+            </div>
+            
+            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Escríbenos directamente a</h3>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-4">
+                <a href="mailto:lpzcarlos97@gmail.com" class="text-2xl md:text-4xl font-bold text-blue-600 hover:text-blue-700 transition border-b-2 border-transparent hover:border-blue-600 pb-1">
+                    lpzcarlos97@gmail.com
+                </a>
+                <button onclick="copyEmail()" class="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition text-gray-500 hover:text-blue-600" title="Copiar email">
+                    <span class="material-symbols-outlined">content_copy</span>
+                </button>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">
+                Te responderemos en menos de 24 horas laborables.
+            </p>
+            
+            <div id="copy-feedback" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-3 py-1 rounded-full opacity-0 transition-opacity duration-300">
+                ¡Email copiado!
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-blue-600">smart_toy</span>
+            <span class="font-bold text-white text-lg">ImpulsaIA</span>
+        </div>
+        <div class="text-sm text-center md:text-right">
+            <p>© 2024 ImpulsaIA. Todos los derechos reservados.</p>
+            <p class="mt-1">Especialistas en Inteligencia Artificial para Pymes.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript for Interactivity -->
+<script>
+    // --- ROI Calculator Logic ---
+    const empInput = document.getElementById('employees');
+    const hoursInput = document.getElementById('hours');
+    const empVal = document.getElementById('emp-val');
+    const hoursVal = document.getElementById('hours-val');
+    const totalSavingsEl = document.getElementById('total-savings');
+    const yearlySavingsEl = document.getElementById('yearly-savings');
+    const hoursSavedEl = document.getElementById('hours-saved');
+
+    const HOURLY_RATE = 15; // Average cost per hour in EUR
+    const WEEKS_PER_MONTH = 4;
+
+    function updateCalculator() {
+        const employees = parseInt(empInput.value);
+        const hoursPerWeek = parseInt(hoursInput.value);
+
+        // Update Labels
+        empVal.textContent = employees + (employees === 1 ? ' empleado' : ' empleados');
+        hoursVal.textContent = hoursPerWeek + ' horas';
+
+        // Calculations
+        const monthlyHoursSaved = employees * hoursPerWeek * WEEKS_PER_MONTH;
+        const monthlySavings = monthlyHoursSaved * HOURLY_RATE;
+        const yearlySavings = monthlySavings * 12;
+
+        // Animate Numbers (Simple text update for responsiveness)
+        totalSavingsEl.textContent = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(monthlySavings);
+        yearlySavingsEl.textContent = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(yearlySavings);
+        hoursSavedEl.textContent = monthlyHoursSaved;
+    }
+
+    if(empInput) {
+        empInput.addEventListener('input', updateCalculator);
+        hoursInput.addEventListener('input', updateCalculator);
+        updateCalculator();
+    }
+
+    // --- Service Tabs / Accordion Logic with Image Switch ---
+    const serviceItems = document.querySelectorAll('.service-item');
+    const serviceImg = document.getElementById('service-img');
+    
+    // Images using Unsplash for this code (Replaces local file paths for portability)
+    const serviceImages = [
+        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2006&auto=format&fit=crop", // Chatbot
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", // Automation
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" // Sales Agent
+    ];
+
+    function changeService(index) {
+        // Reset styles
+        serviceItems.forEach((item, i) => {
+            if(i === index) {
+                item.classList.remove('border-gray-700');
+                item.classList.add('border-blue-600');
+                // Show text
+                item.querySelector('p').classList.remove('hidden');
+            } else {
+                item.classList.add('border-gray-700');
+                item.classList.remove('border-blue-600');
+                // Hide text
+                item.querySelector('p').classList.add('hidden');
+            }
+        });
+
+        // Change Image with Fade effect
+        serviceImg.style.opacity = '0';
+        setTimeout(() => {
+            serviceImg.src = serviceImages[index];
+            serviceImg.onload = () => {
+                serviceImg.style.opacity = '1';
+            }
+        }, 300);
+    }
+
+    // --- Mobile Menu Toggle ---
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    if(btn) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+
+    // --- Copy to Clipboard ---
+    function copyEmail() {
+        navigator.clipboard.writeText('lpzcarlos97@gmail.com').then(() => {
+            const feedback = document.getElementById('copy-feedback');
+            feedback.style.opacity = '1';
+            setTimeout(() => {
+                feedback.style.opacity = '0';
+            }, 2000);
+        });
+    }
+    
+    // --- Navbar Scroll Effect ---
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if(nav) {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-white/90', 'bg-white');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-white', 'bg-white/90');
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
