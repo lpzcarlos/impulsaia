@@ -5,81 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tus Regalos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Estilos básicos para asegurar funcionalidad incluso si Tailwind tarda en cargar */
-        .oculto { display: none !important; }
-        .visible { display: block !important; }
-        
-        /* Efecto zoom para imágenes */
-        .imagen-zoom:hover { transform: scale(1.05); }
-        .imagen-zoom { transition: transform 0.3s ease; cursor: pointer; }
-    </style>
 </head>
-<body class="bg-slate-100 font-sans min-h-screen">
+<body class="bg-gray-100 font-sans min-h-screen flex items-center justify-center p-4">
 
-    <div id="pantalla-inicio" class="visible min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-md space-y-8">
+        <div class="text-center">
+            <h1 class="text-4xl font-extrabold text-gray-800 mb-2">¡Sorpresa! 🎁</h1>
+            <p class="text-gray-500">Selecciona un regalo para abrirlo</p>
+        </div>
+
+        <div class="space-y-4">
+            <a href="regalo1.html" class="block group relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border-l-8 border-red-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Regalo 1</h2>
+                        <p class="text-red-500 text-sm font-medium mt-1">Experiencia Gastronómica 🍣</p>
+                    </div>
+                    <span class="text-3xl group-hover:translate-x-2 transition-transform">👉</span>
+                </div>
+            </a>
+
+            <a href="regalo2.html" class="block group relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border-l-8 border-green-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Regalo 2</h2>
+                        <p class="text-green-600 text-sm font-medium mt-1">Escapada Rural 🏡</p>
+                    </div>
+                    <span class="text-3xl group-hover:translate-x-2 transition-transform">👉</span>
+                </div>
+            </a>
+        </div>
         
-        <h1 class="text-4xl font-bold text-slate-800 mb-2">¡Felicidades! 🎉</h1>
-        <p class="text-slate-500 mb-10 text-center">Elige tu regalo para ver los detalles</p>
-
-        <div class="space-y-6 w-full max-w-sm">
-            <button onclick="abrirPagina('pagina-regalo-1')" 
-                    class="w-full bg-white p-6 rounded-xl shadow-lg border-l-8 border-red-500 hover:shadow-2xl transition-all transform active:scale-95 text-left flex items-center justify-between group">
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-800">Regalo 1</h2>
-                    <p class="text-sm text-red-500 font-semibold mt-1">Ver experiencia 🍣</p>
-                </div>
-                <span class="text-3xl group-hover:translate-x-2 transition">👉</span>
-            </button>
-
-            <button onclick="abrirPagina('pagina-regalo-2')" 
-                    class="w-full bg-white p-6 rounded-xl shadow-lg border-l-8 border-green-500 hover:shadow-2xl transition-all transform active:scale-95 text-left flex items-center justify-between group">
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-800">Regalo 2</h2>
-                    <p class="text-sm text-green-600 font-semibold mt-1">Ver experiencia 🏡</p>
-                </div>
-                <span class="text-3xl group-hover:translate-x-2 transition">👉</span>
-            </button>
-        </div>
+        <p class="text-center text-xs text-gray-400 mt-8">Hecho con cariño</p>
     </div>
 
-    <div id="pagina-regalo-1" class="oculto min-h-screen bg-white">
-        <div class="sticky top-0 bg-red-500 text-white p-4 shadow-md z-10 flex items-center">
-            <button onclick="volverInicio()" class="text-2xl mr-4 hover:bg-red-600 rounded-full px-3 py-1">←</button>
-            <h2 class="font-bold text-lg">Regalo 1</h2>
-        </div>
-
-        <div class="max-w-2xl mx-auto p-6 pb-20">
-            <h1 class="text-3xl font-bold text-gray-800 mb-6">Taller de sushi en Madrid 🍣</h1>
-            
-            <div class="prose text-gray-600 space-y-4 text-lg">
-                <p>
-                    Taller para realizar diferentes piezas de sushi como <strong class="text-red-500">maki, uramaki y nigiris</strong> así como la preparación del arroz con una duración de 3 horas.
-                </p>
-                <div class="bg-red-50 p-6 rounded-xl border border-red-100 my-4">
-                    <p class="font-semibold text-red-800">✅ El taller incluye:</p>
-                    <p>Todo lo necesario e ingredientes para realizar todas las piezas.</p>
-                </div>
-                <p class="italic text-gray-500 text-center text-base border-t pt-4">
-                    "Al finalizar el taller nos podemos llevar las piezas a casa."
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="pagina-regalo-2" class="oculto min-h-screen bg-white">
-        <div class="sticky top-0 bg-green-600 text-white p-4 shadow-md z-10 flex items-center">
-            <button onclick="volverInicio()" class="text-2xl mr-4 hover:bg-green-700 rounded-full px-3 py-1">←</button>
-            <h2 class="font-bold text-lg">Regalo 2</h2>
-        </div>
-
-        <div class="max-w-2xl mx-auto p-6 pb-20">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Casa rural en Segovia 🏡</h1>
-            <p class="text-green-600 font-bold mb-6">Fin de semana del 6-8 de Febrero</p>
-            
-            <p class="text-gray-600 text-lg mb-8">
-                Casa rural en un pueblo al lado de Segovia. Un entorno perfecto para desconectar.
-            </p>
-
-            <h3 class="font-semibold text-gray-400 uppercase tracking-wider text-sm mb-4">Galería de fotos</h3>
-            <div class="grid grid-cols-2 gap-3">
+</body>
+</html>
